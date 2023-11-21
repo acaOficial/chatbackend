@@ -1,20 +1,16 @@
 import { UUIDGenerator } from "../../../shared/application/ports/UUIDGenerator";
 import { Result } from "../../../shared/utils/Result";
 import { User } from "../../domain/User";
-import { InMemoryUserRepository } from "../../infraestructure/InMemoryUserRepository";
-import { MysqlUserRepository } from "../../infraestructure/MysqlUserRepository";
 import { UserRepository } from "../ports/UserRepository";
 
-export class RegisterUserUseCase{
-
+export class UserRegistrar{
     constructor(
         private readonly userRepository : UserRepository,
         private readonly uuidGenerator : UUIDGenerator
         ){
     }
 
-
-    public execute(
+    public register(
         username : string, 
         password : string, 
         firstName : string, 
