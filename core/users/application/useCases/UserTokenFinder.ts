@@ -11,7 +11,7 @@ export class UserTokenFinder{
 
     public find(username : string, password : string) {
             const token = this.userRepository.getTokenByCredentials(username, password)
-            if(token) return Result.ok(token)
+            if(token) return Result.ok({token})
             return Result.fail("this credentials doesnt exist")
     }
 }
