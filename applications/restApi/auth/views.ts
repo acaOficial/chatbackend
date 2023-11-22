@@ -2,6 +2,7 @@ import { Request, Response, Router } from 'express';
 import { userRepository, uuidGenerator } from '../dependencies';
 import { UserRegistrar } from '../../../core/users/application/useCases/UserRegistrar';
 import { UserTokenFinder } from '../../../core/users/application/useCases/UserTokenFinder';
+import { isAuthenticatedOnly } from './middlewares';
 
 const router = Router()
 

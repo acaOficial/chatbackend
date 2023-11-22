@@ -4,7 +4,6 @@ import { User } from "../../domain/User";
 import { UserRepository } from "../ports/UserRepository";
 
 export class UserAuthenticator{
-
     constructor(
         private readonly userRepository : UserRepository,
         ){
