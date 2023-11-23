@@ -1,7 +1,0 @@
-1. Endpoint para listar chats
-2. endpoint para crear chats
-3. endpoint para enviar mensaje
-
-4. listener mensajes de un chat socket.io
-5. listener creacion de un chat socket.io
-

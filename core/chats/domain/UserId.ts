@@ -1,14 +1,8 @@
 export class UserId {
     private readonly id: string;
 
-    constructor(id?: string) {
-        this.id = id ?? this.generateId();
-    }
-
-    private generateId(): string {
-        // Implement your own ID generation logic here
-        // For simplicity, we'll just use a simple placeholder
-        return Math.random().toString(36).substring(2, 15);
+    constructor(id: string) {
+        this.id = id;
     }
 
     public getId(): string {

@@ -1,9 +1,9 @@
 import express, { Application, Router } from 'express';
 import dotenv from 'dotenv';
 import authRouter from './auth/views';
+import chatRouter from './chat/views';
 import { App } from '../share/app';
 import { authenticateUserMiddleware } from './auth/middlewares';
-import { Result } from '../../core/shared/utils/Result';
 
 export class ExpressRestApi implements App{
     private readonly app : Application;
@@ -19,6 +19,7 @@ export class ExpressRestApi implements App{
         this.registerMiddleware(express.json());
         this.registerMiddleware(authenticateUserMiddleware)
         this.registerRoute('/auth', authRouter)
+        this.registerRoute('/chats', chatRouter)
     }
 
     private registerMiddleware(middleware : any){
